@@ -23,8 +23,8 @@ class pipenfilter {
         return dataOne;
     }
 
-    public static void parseWords(String data, Set<String> words) {
-        String[] str = data.split(" ");
+    public static void parseWords(String dataClean, Set<String> words) {
+        String[] str = dataClean.split(" ");
         for (int i = 0; i < str.length; i++) {
             words.add(str[i]);
         }
@@ -39,8 +39,8 @@ class pipenfilter {
     public static void main(String[] args) throws Exception {
         Set<String> words = new HashSet<String>();
         String data = readFileAsString("pftest.txt");
-        data = cleanData(data);
-        parseWords(data, words);
+        String dataClean = cleanData(data);
+        parseWords(dataClean, words);
         printUniqueWords(words);
     }
 }
