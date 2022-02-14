@@ -42,5 +42,7 @@ class pipenfilter {
         String dataClean = cleanData(data);
         parseWords(dataClean, words);
         printUniqueWords(words);
+        // instead of batch sequential
+        // implenet multithreading the run interface
     }
 }
