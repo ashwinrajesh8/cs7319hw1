@@ -25,6 +25,7 @@ public class readFileAsString implements Runnable {
         } catch (Exception e) {
             System.out.println("File parsing failed.\n");
         }
-        System.out.println(everything);
+        // System.out.println(everything);
+        new Thread(new cleanData(everything)).start();
     }
 }
